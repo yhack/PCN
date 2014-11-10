@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
+	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
+	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+	
+	
+	   <!-- Add jQuery Mobile & UI CSS styles //-->
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/base/jquery-ui.css" />
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+   <!-- Add jQuery, jQuery Mobile and jQuery UI //-->
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	
+	
+	<script>
+      $(function() {
+         $( "#items" ).sortable();
+      });
+	  
+	  	  $(window).load(function(){
+    $(function () {
+        $('#radio-choice-h-2a').change(function () {
+            $('#textContainer').toggle(this.checked);
+			}).change();
+		});
+	});
+	
+	$( ".target" ).change(function() {
+		alert( "Handler for .change() called." );
+	});
+	$( "p" ).parent( ".selected" )
+	
+	
+
+	
+   </script>
+   
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>PCN Data Collector</h1>
+	</div><!-- /header -->
+
+	<form>
+     <label for="text-1">Title</label>
+     <input name="text-1" id="text-1" value="" type="text">
+	 <label for="text-1">Author</label>
+     <input name="text-1" id="text-1" value="" type="text">
+	 <label for="text-1">Description</label>
+     <textarea cols="40" rows="8" name="textarea-1" id="textarea-1"></textarea>
+	</form>
+	
+	<div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="items">
+    <div data-role="collapsible" class="step">
+		
+        <h3 class="title">Section 1</h3>
+
+		<form>
+
+				<label for="textinput-fc">Process Step:</label>
+				<input name="textinput-fc" id="textinput-fc" placeholder="Step" value="" type="text" class="title-input">
+
+
+		
+			
+			
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Control Region:</legend>
+				<input name="radio-choice-h-2" id="radio-choice-h-2a" type="radio">
+				<label for="radio-choice-h-2a">Prov Ind</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2b" type="radio">
+				<label for="radio-choice-h-2b">Prov Surr</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2c" type="radio">
+				<label for="radio-choice-h-2c">Prov Direct</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2d" type="radio">
+				<label for="radio-choice-h-2d">Both Direct</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2e" type="radio">
+				<label for="radio-choice-h-2e">Cust Direct</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2f" type="radio">
+				<label for="radio-choice-h-2f">Cust Surr</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2g" type="radio">
+				<label for="radio-choice-h-2g">Cust Ind</label>
+			</fieldset>
+			
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Customer Value:</legend>
+				<input name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="false" type="radio">
+				<label for="radio-choice-h-2a"> <font size="10px">&#9786;&#9786;</font> </label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2b" value="off" type="radio">
+				<label for="radio-choice-h-2b"><font size="10px">&#9786;</font></label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2c" value="other" checked="checked" type="radio">
+				<label for="radio-choice-h-2c"><font size="10px"> - </font></label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2d" value="other" type="radio">
+				<label for="radio-choice-h-2d"><font size="6.2px">&#x2639</font></label>
+			</fieldset>
+						
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Potential Problems:</legend>
+				<input name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="false" type="checkbox">
+				<label for="radio-choice-h-2a">Inconvenient</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2b" value="off" type="checkbox">
+				<label for="radio-choice-h-2b">Confusing</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2c" value="other" type="checkbox">
+				<label for="radio-choice-h-2c">Difficult</label>
+				<input name="radio-choice-h-2" id="radio-choice-h-2d" value="other" type="checkbox">
+				<label for="radio-choice-h-2d">Likely to Fail</label>
+			</fieldset>
+		</form>
+    </div>
+    <div data-role="collapsible">
+        <h3>Section 2</h3>
+        <p>I'm the collapsible content for section 2</p>
+    </div>
+    <div data-role="collapsible">
+        <h3>Section 3</h3>
+        <p>I'm the collapsible content for section 3</p>
+    </div>
+</div>
+
+<style>
+.problems .ui-input-text {
+    display:inline-block;
+}
+</style>
+<script>
+	$('.title-input').each(function() {
+	   var elem = $(this);
+
+	   // Save current value of element
+	   elem.data('oldVal', elem.val());
+
+	   // Look for changes in the value
+	   elem.bind("propertychange change click keyup input paste", function(event){
+		  // If value has changed...
+		  if (elem.data('oldVal') != elem.val()) {
+		   // Updated stored value
+		   elem.data('oldVal', elem.val());
+
+		   // Do action
+		   debugger;
+		   elem.parent( ".step-title" ).text("Hello world!");
+		   alert( "Handler for .change() calledgggggggggggg." + elem.text() );
+		 }
+	   });
+	 });
+	 
+	$( ".step" ).clone().appendTo( ".items" );
+   </script>
+
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
